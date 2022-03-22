@@ -2,12 +2,22 @@
 
 {% block content %}
 <div class="container">
-    <div class="box is-shadowless has-text-centered">
-        <span class="icon mt-2">
-            <i class="fa-solid fa-lock" style="font-size: 3em;"></i>
-        </span>
-        <h4 style="margin-top: 0.25em;"><strong>Self Service</strong></h4>
-        <input class="input is-normal mt-5" type="text" placeholder="Normal input">
+    <div class="box is-shadowless">
+        <div class="content has-text-centered">
+            <h1 class="title is-4">Need to set your password?</h1>
+            <p class="subtitle is-7">Enter the email address associated with your account<br>and a one-time reset code will be sent to you.</p>
+        </div>
+        <div class="field pt-5">
+            <label class="label is-size-7">Email Address</label>
+            <div class="control">
+                <input id="email" class="input is-small is-normal" type="email" placeholder="example@email.com" autocomplete="off">
+            </div>
+        </div>
+        <div class="field mt-5">
+            <div class="control">
+                <button id="request-submit" class="button is-small is-primary is-fullwidth" onclick="request()">Request Reset Link</button>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
